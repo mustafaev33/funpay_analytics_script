@@ -62,12 +62,26 @@ if response.status_code == 200:
             'Валюта': currency            
         })
     df = pd.DataFrame(data)
+
     print("Collected data: ")
     print(df.head(10))
+
     save = input("Do you want to save data to csv-file? Enter y/yes - if yes or other symbol - if no: ").strip().lower()
     if save in ["y", "н", "yes", "да", "д"]:
-        df.to_csv("my_sales.csv", index=False, encoding="utf-8-sig")
-        print("Succesful create csv-data file")
+        try:
+
+            old_df = pd.read_csv("my_sales.csv")
+            print(f"Found data-file with {len(old_df)} data-notes. Updating, please wait")
+            update_df = pd.concat([old_df, df], ignore_index=True)
+            update_df = update_df.drop_duplicates(subset=['Заказ'], keep='first')
+            new_notes = len(update_df) - len(old_df)
+            update_df.to_csv("my_sales.csv", index=False, encoding="utf-8-sig")
+            print(f"Succesful updating! Add {new_notes} new notes")
+            print(f"Notes in new data-file: {len(update_df)}")
+
+        except FileNotFound:
+            df.to_csv("my_sales.csv", index=False, encoding="utf-8-sig")
+            print("Succesful create csv-data file")
     else:
         print("Succesfully")
 else:
