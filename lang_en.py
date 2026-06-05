@@ -1,0 +1,22 @@
+TEXTS = {
+    'welcome': "Welcome to FunPay data collector",
+    'url_input': "Enter your sales-page URL (or only push Enter to set default URL: '{}'): ",
+    'cookie_warn': "WARNING: to collect your data you must enter your cookies",
+    'cookie_choice': "You can choose:\n1. Collect your cookies in auto-mode\n2. Enter your cookies manually",
+    'enter_choice': "Enter 1 for auto-mode or 2 for enter your cookies manually: ",
+    'manual': "How?: F12 -> Network -> F5 -> find: funpay.com - trade.html (right click) -> Copy as cURL -> Copy your 'Cookie: '",
+    'enter_cookie': "Enter your cookies: ",
+    'wrong_choice': "Incorrect choice. Disconnecting.",
+    'fatal_cookie': "Fatal error: you aren't enter your cookies. Disconnecting.",
+    'connecting': "Try to connect to FunPay...",
+    'success': "Succesful connection",
+    'found': "Found {} sales",
+    'collected': "Collected data: ",
+    'save_choice': "Do you want to save data to csv-file? Enter y/н - if yes or other symbol - if no: ",
+    'found_old_file': "Found data-file with {} data-notes. Updating, please wait",
+    'success_update': "Succesful updating! Add {} new notes",
+    'total_notes': "Notes in new data-file: {}",
+    'saved': "Succesful create csv-data file",
+    'success_no_save': "Succesfully",
+    'error_conn': "Connection error. Status code: {}"
+}

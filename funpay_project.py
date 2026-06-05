@@ -3,30 +3,35 @@ import pandas as pd
 from bs4 import BeautifulSoup as bs
 from auto_cookie import get_auto_cookies
 
-print("Welcome to FunPay-data collector")
+lang_input = input("Выберите язык / Choose language (ru/en): ").strip().lower()
+lang = 'ru' if lang_input == 'ru' else 'en'
+if lang == 'ru':
+    from lang_ru import TEXTS
+else:
+    from lang_en import TEXTS
+
+print(TEXTS['welcome'])
 
 default_url = "https://funpay.com/orders/trade"
-url_input = input(f"Enter your sales-page URL (or only push Enter to set default URL: '{default_url}'): ").strip()
+url_input = input(TEXTS['url_input'].format(default_url)).strip()
 url = url_input if url_input else default_url
 
-print("\nWARNING: to collect your data you must enter your cookies")
-print("You can choose: ")
-print("1.Collect your cookies in auto-mode")
-print("2.Enter your cookies manually")
-choice = input("Enter 1 for auto-mode or 2 for enter your cookies manually: ")
+print(f"\n{TEXTS['cookie_warn']}")
+print(TEXTS['cookie_choice'])
+choice = input(TEXTS['enter_choice'])
 cookie = ""
 
 if choice == '1':
     cookie = get_auto_cookies()
 elif choice == '2':
-    print("How?: F12 -> Network -> F5 -> find: funpay.com - trade.html (right click) -> Copy as cURL -> Copy your 'Cookie: '")
-    cookie = input("Enter your cookies: ").strip()
+    print(TEXTS['manual'])
+    cookie = input(TEXTS['enter_cookie']).strip()
 else:
-    print("Incorrect choice. Disconnecting")
+    print(TEXTS['wrong_choice'])
     exit()
 
 if len(cookie) <= 20:
-    print("\nFatal error: you aren't enter your cookies. Disconnecting")
+    print(f"\n{TEXTS['fatal_cookie']}")
     exit()
 
 headers = {
@@ -34,14 +39,14 @@ headers = {
     "Cookie": cookie
 }
 
-print("Try to connect to FunPay")
+print(TEXTS['connecting'])
 response = requests.get(url, headers=headers)
 
 if response.status_code == 200:
-    print("Succesful connection")
+    print(TEXTS['success'])
     soup = bs(response.text, "html.parser")
     items = soup.find_all("a", class_= "tc-item")
-    print(f"Found {len(items)} sales")
+    print(TEXTS['found'].format(len(items)))
 
     data = []
     for item in items:
@@ -63,26 +68,26 @@ if response.status_code == 200:
         })
     df = pd.DataFrame(data)
 
-    print("Collected data: ")
+    print(TEXTS['collected'])
     print(df.head(10))
 
-    save = input("Do you want to save data to csv-file? Enter y/yes - if yes or other symbol - if no: ").strip().lower()
+    save = input(TEXTS['save_choice']).strip().lower()
     if save in ["y", "н", "yes", "да", "д"]:
         try:
 
             old_df = pd.read_csv("my_sales.csv")
-            print(f"Found data-file with {len(old_df)} data-notes. Updating, please wait")
+            print(TEXTS['found_old_file'].format(len(old_df)))
             update_df = pd.concat([old_df, df], ignore_index=True)
             update_df = update_df.drop_duplicates(subset=['Заказ'], keep='first')
             new_notes = len(update_df) - len(old_df)
             update_df.to_csv("my_sales.csv", index=False, encoding="utf-8-sig")
-            print(f"Succesful updating! Add {new_notes} new notes")
-            print(f"Notes in new data-file: {len(update_df)}")
+            print(TEXTS['success_update'].format(new_notes))
+            print(TEXTS['total_notes'].format(len(update_df)))
 
         except FileNotFound:
             df.to_csv("my_sales.csv", index=False, encoding="utf-8-sig")
-            print("Succesful create csv-data file")
+            print(TEXTS['saved'])
     else:
-        print("Succesfully")
+        print(TEXTS['success_no_save'])
 else:
-    print(f"Connection error. Status code: {response.status_code}")
+    print(TEXTS['error_conn'].format(response.status_code))
