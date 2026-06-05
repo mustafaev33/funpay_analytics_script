@@ -18,5 +18,6 @@ TEXTS = {
     'total_notes': "Notes in new data-file: {}",
     'saved': "Succesful create csv-data file",
     'success_no_save': "Succesfully",
-    'error_conn': "Connection error. Status code: {}"
+    'error_conn': "Connection error. Status code: {}",
+    'revenue_visual': "Revenue by month {}"
 }

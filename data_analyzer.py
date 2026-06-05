@@ -1,7 +1,6 @@
 import pandas as pd
-import matplotlib as plt
-import seaborn as sb
 from datetime_analyzer import analyze_dates
+from visual import visual_data
 
 print("Loading data from my_sales.csv")
 df = pd.read_csv("my_sales.csv")
@@ -42,3 +41,4 @@ print(f"Sum: {refund_amount:.2f} {currency}")
 print(f"Return percentage: {refund_percent:.1f}%")
 
 analyze_dates(df, currency)
+visual_data(df, currency)
