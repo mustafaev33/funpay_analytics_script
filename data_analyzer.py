@@ -1,11 +1,14 @@
 import pandas as pd
+import matplotlib as plt
+import seaborn as sb
+from datetime_analyzer import analyze_dates
 
 print("Loading data from my_sales.csv")
 df = pd.read_csv("my_sales.csv")
 
 currency = df['Валюта'].mode()[0] if 'Валюта' in df.columns else '₽'
-print(f"Records uploaded: {len(df)}")
-print("FINANCIAL SUMMARY:")
+print(f"\nRecords uploaded: {len(df)}")
+print("\nFINANCIAL SUMMARY:")
 
 df['Цена'] = pd.to_numeric(df['Цена'], errors='coerce')
 
@@ -37,3 +40,5 @@ print(f"\nRefunds:")
 print(f"Count: {refund_count}")
 print(f"Sum: {refund_amount:.2f} {currency}")
 print(f"Return percentage: {refund_percent:.1f}%")
+
+analyze_dates(df, currency)
