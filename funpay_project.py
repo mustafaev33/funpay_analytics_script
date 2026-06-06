@@ -91,3 +91,16 @@ if response.status_code == 200:
         print(TEXTS['success_no_save'])
 else:
     print(TEXTS['error_conn'].format(response.status_code))
+
+if len(df) > 0:
+    run_analytics = input(TEXTS['run_analytics']).strip().lower()
+    if run_analytics in ["y", "н", "yes", "да", "д"]:
+        import data_analyzer
+        from datetime_analyzer import analyze_dates 
+        data_analyzer
+        analyze_dates(df, currency)
+
+    run_charts = input(TEXTS['run_charts']).strip().lower()
+    if run_charts in ["y", "н", "yes", "да", "д"]:
+        from visual import visual_data
+        visual_data(df, currency)

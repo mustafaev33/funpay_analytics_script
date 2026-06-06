@@ -19,5 +19,7 @@ TEXTS = {
     'saved': "Succesful create csv-data file",
     'success_no_save': "Succesfully",
     'error_conn': "Connection error. Status code: {}",
-    'revenue_visual': "Revenue by month {}"
+    'revenue_visual': "Revenue by month {}",
+    'run_analytics': "Run text analytics? (y/n): ",
+    'run_charts': "Build charts? (y/n): "
 }

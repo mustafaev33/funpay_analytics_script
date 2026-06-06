@@ -5,7 +5,7 @@ from lang_ru import TEXTS
 from lang_en import TEXTS
 
 def visual_data(df, currency):
-
+    df['Цена'] = pd.to_numeric(df['Цена'], errors='coerce')
     dates = df['Дата'].apply(lambda x: parse(x, languages=['ru']))
     monthly = df.groupby(dates.dt.to_period('M'))['Цена'].sum()
 

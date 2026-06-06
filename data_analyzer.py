@@ -39,6 +39,3 @@ print(f"\nRefunds:")
 print(f"Count: {refund_count}")
 print(f"Sum: {refund_amount:.2f} {currency}")
 print(f"Return percentage: {refund_percent:.1f}%")
-
-analyze_dates(df, currency)
-visual_data(df, currency)

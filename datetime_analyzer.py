@@ -6,6 +6,7 @@ def analyze_dates(df, currency):
 
     df['Дата_время'] = df['Дата'].apply(lambda x: parse(x, languages=['ru']))
     df_valid = df.dropna(subset=['Дата_время'])
+    df_valid['Цена'] = pd.to_numeric(df_valid['Цена'], errors='coerce')
 
     print(f"Analyzed {len(df_valid)} of {len(df)} data-notes")
 
