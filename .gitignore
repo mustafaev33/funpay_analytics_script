@@ -2,3 +2,7 @@
 my_sales.csv
 __pycache__/
 *.pyc
+build/
+dist/
+*.spec
+*.exe
