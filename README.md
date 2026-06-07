@@ -1,5 +1,9 @@
 [🇺 Читать на русском](README_RU.md) | [🇬🇧 Read in English](README.md)
 
+<p align="center">
+  <img src="screenshots/logo.png" alt="FunPay Analytics Logo" width="250"/>
+</p>
+
 # FunPay Analytics Script
 
 A Python script for automatic collection, structuring, and analysis of sales data from the FunPay marketplace.
@@ -27,7 +31,22 @@ Built in **Python** using a mix of procedural and modular approaches (functions,
 
 ## Installation & Usage
 
-*(This section will be updated after packaging the script into a standalone .exe file for easy use without Python installed).*
+You don't need to install Python or any dependencies. The tool is packaged as a standalone Windows executable.
+
+### 1. Download
+Go to the [Releases](https://github.com/mustafaev33/funpay_analytics_script/releases) page and download the latest `FunPay_Analytics.exe` file.
+
+### 2. First Launch & Windows Defender
+Since the `.exe` is not digitally signed, Windows SmartScreen or your antivirus might show a warning.
+- Click **"More info"** -> **"Run anyway"**.
+- Alternatively, add the folder with the `.exe` to your antivirus exclusions.
+
+### 3. How to use
+1. Run `FunPay_Analytics.exe`.
+2. Choose your language (`ru` / `en`).
+3. Enter your FunPay sales page URL (or press Enter for default).
+4. Choose cookie collection method (Auto or Manual).
+5. Follow the on-screen prompts to save data, run analytics, and view charts.
 
 ## Examples
 
@@ -54,3 +73,11 @@ Built in **Python** using a mix of procedural and modular approaches (functions,
 ### Charts & Visualizations
 ![Charts and Diagrams](screenshots/visual.png)
 *Figure 7: Generated charts and pie diagrams showing key metrics*
+
+## Contact & Feedback
+
+Found a bug? Have a feature request?
+- **Issues:** Open an issue on [GitHub](https://github.com/mustafaev33/funpay_analytics_script/issues)
+- **Telegram:** [@mustafaev33](https://t.me/mustafaev33)
+- **Email:** rdd22833t@gmail.com
+- **FunPay** [FunPay](https://funpay.com/users/2671110/)
