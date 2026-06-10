@@ -1,13 +1,17 @@
 import pandas as pd
 from datetime_analyzer import analyze_dates
 from visual import visual_data
+from rich.console import Console
+from __main__ import TEXTS
 
-print("Loading data from my_sales.csv")
+console = Console()
+
+console.print(TEXTS['load_data'])
 df = pd.read_csv("my_sales.csv")
 
 currency = df['Валюта'].mode()[0] if 'Валюта' in df.columns else '₽'
-print(f"\nRecords uploaded: {len(df)}")
-print("\nFINANCIAL SUMMARY:")
+console.print(TEXTS['rec_upload'].format(len(df)))
+console.print(TEXTS['fin_sum'])
 
 df['Цена'] = pd.to_numeric(df['Цена'], errors='coerce')
 
@@ -26,16 +30,16 @@ refund_amount = refund_deals['Цена'].sum()
 
 refund_percent = (refund_count / total_deals * 100) if total_deals > 0 else 0
 
-print(f"\nGeneral statistics:")
-print(f"Total deals: {total_deals}")
-print(f"Total revenue: {total_revenue:.2f} {currency}")
-print(f"Average check: {avg_check:.2f} {currency}")
+console.print(TEXTS['gen_stat'])
+console.print(TEXTS['total_deals'].format(total_deals))
+console.print(TEXTS['total_rev'].format(total_revenue, currency))
+console.print(TEXTS['avg_check'].format(avg_check, currency))
 
-print(f"\nClosed deals:")
-print(f"Count: {closed_count}")
-print(f"Sum: {closed_revenue:.2f} {currency}")
+console.print(TEXTS['closed_deals'])
+console.print(TEXTS['count'].format(closed_count))
+console.print(TEXTS['sum'].format(closed_revenue, currency))
 
-print(f"\nRefunds:")
-print(f"Count: {refund_count}")
-print(f"Sum: {refund_amount:.2f} {currency}")
-print(f"Return percentage: {refund_percent:.1f}%")
+console.print(TEXTS['refunds'])
+console.print(TEXTS['ref_count'].format(refund_count))
+console.print(TEXTS['ref_sum'].format(refund_amount, currency))
+console.print(TEXTS['ref_percent'].format(refund_percent))

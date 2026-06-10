@@ -4,7 +4,7 @@
   <img src="screenshots/logo.png" alt="FunPay Analytics Logo" width="250"/>
 </p>
 
-# FunPay Analytics Script
+# FunPay Analytics Script by mustafaev33
 
 Python-скрипт для автоматического сбора, структурирования и анализа продаж на маркетплейсе FunPay. 
 
@@ -28,21 +28,25 @@ Python-скрипт для автоматического сбора, струк
 - `browser_cookie3` — безопасный извлечение Cookie из браузеров.
 - `matplotlib` — построение графиков и диаграмм.
 - `dateparser` — интеллектуальный парсинг дат на русском языке.
+- `rich` — красивая подсветка текста вывода.
 
 ## Установка и запуск
 
-Вам не нужно устанавливать Python или какие-либо библиотеки. Инструмент упакован в единый исполняемый файл для Windows.
+Вам не нужно устанавливать Python или какие-либо библиотеки. Инструмент упакован в ZIP-архив со всеми зависимостями.
 
 ### 1. Скачивание
-Перейдите на страницу [Releases](https://github.com/mustafaev33/funpay_analytics_script/releases) и скачайте последний файл `FunPay_Analytics.exe`.
+Перейдите на страницу [Releases](https://github.com/mustafaev33/funpay_analytics_script/releases) и скачайте последний архив `FunPayAnalytics_v1.1.0.zip`.
 
-### 2. Первый запуск и Windows Defender
+### 2. Распаковка
+Распакуйте архив в любую удобную папку (например, `C:\Programs\FunPayAnalytics`).
+
+### 3. Первый запуск и Windows Defender
 Так как `.exe` файл не имеет цифровой подписи, Windows SmartScreen или антивирус могут показать предупреждение.
 - Нажмите **"Подробнее"** (More info) -> **"Выполнить в любом случае"** (Run anyway).
 - Либо добавьте папку с `.exe` в исключения вашего антивируса.
 
-### 3. Как пользоваться
-1. Запустите `FunPay_Analytics.exe`.
+### 4. Как пользоваться
+1. Запустите `FunPayAnalytics.exe`.
 2. Выберите язык (`ru` / `en`).
 3. Введите URL страницы продаж FunPay (или нажмите Enter для стандартного).
 4. Выберите способ получения Cookie (Авто или Вручную).

@@ -4,7 +4,7 @@
   <img src="screenshots/logo.png" alt="FunPay Analytics Logo" width="250"/>
 </p>
 
-# FunPay Analytics Script
+# FunPay Analytics Script by mustafaev33
 
 A Python script for automatic collection, structuring, and analysis of sales data from the FunPay marketplace.
 
@@ -28,21 +28,25 @@ Built in **Python** using a mix of procedural and modular approaches (functions,
 - `browser_cookie3` — secure cookie extraction from browsers.
 - `matplotlib` — chart and diagram rendering.
 - `dateparser` — intelligent Russian-language date parsing.
+- `rich` — beautiful highlighting of the output text.
 
 ## Installation & Usage
 
-You don't need to install Python or any dependencies. The tool is packaged as a standalone Windows executable.
+You don't need to install Python or any libraries. The tool is packaged in a ZIP archive with all dependencies.
 
 ### 1. Download
-Go to the [Releases](https://github.com/mustafaev33/funpay_analytics_script/releases) page and download the latest `FunPay_Analytics.exe` file.
+Go to the [Releases](https://github.com/mustafaev33/funpay_analytics_script/releases) page and download the latest archive `FunPayAnalytics_v1.1.0.zip`.
 
-### 2. First Launch & Windows Defender
+### 2. Unpacking
+Unzip the archive to any convenient folder (for example, `C:\Programs\FunPayAnalytics`).
+
+### 3. First Launch & Windows Defender
 Since the `.exe` is not digitally signed, Windows SmartScreen or your antivirus might show a warning.
 - Click **"More info"** -> **"Run anyway"**.
 - Alternatively, add the folder with the `.exe` to your antivirus exclusions.
 
-### 3. How to use
-1. Run `FunPay_Analytics.exe`.
+### 4. How to use
+1. Run `FunPayAnalytics.exe`.
 2. Choose your language (`ru` / `en`).
 3. Enter your FunPay sales page URL (or press Enter for default).
 4. Choose cookie collection method (Auto or Manual).
