@@ -42,7 +42,13 @@ TEXTS = {
     'sls_week': "\n[bold #21cf44]Продажи по дням недели:[bold #21cf44]",
     'prof_error': "[bold red]Ошибка подключения к профилю. Код ошибки: {}[bold red]",
     'rev_title': "[bold cyan]Аналитика рейтинга и отзывов:[bold cyan]",
-    'rating': "[bold bright_green]Рейтинг: {}[bold bright_green]",
+    'green_rating': "[bold green]Рейтинг: {}[bold green]",
+    'yellow_rating': "[bold yellow]Рейтинг: {}[bold yellow]",
+    'red_rating': "[bold red]Рейтинг: {}[bold red]",
     'rev_searched': "[bold yellow]Отзывов проверено: {}[bold yellow]",
-    'rev_error': "[bold red]Ошибка поиска отзывов[bold red]"
+    'top_rev_cnt': "\n[bold cyan]Топ ключевых слов в отзывах:[/bold cyan]",
+    'rev_results': "[bold white]Слово[bold white] [bold cyan]{}[bold cyan] [bold white]встречается[bold white] [bold cyan]{}[bold cyan] [bold white]раз[bold white]",
+    'rev_error': "[bold red]Ошибка поиска отзывов[bold red]",
+    'run_reviews': "[bold white]Запустить аналитику отзывов? (y/n): [bold white]",
+    'enter_prof_url': "[bold red]ВНИМАНИЕ! Перед запуском аналитики отзывов введите ссылку на Ваш профиль FunPay: [bold red]"
 }

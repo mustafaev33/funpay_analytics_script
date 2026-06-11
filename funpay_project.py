@@ -104,6 +104,17 @@ if len(df) > 0:
         data_analyzer
         analyze_dates(df, currency)
 
+    run_reviews = console.input(TEXTS['run_reviews']).strip().lower()
+    if run_reviews in ["y", "н", "yes", "да", "д"]:
+        from reviews_analyzer import check_reviews
+
+        url_rev_input = console.input(TEXTS['enter_prof_url']).strip()
+        profile_url = url_rev_input if url_rev_input else None
+        if profile_url is None or len(profile_url) < 15:
+            console.print(TEXTS['rev_error'])
+        else:
+            check_reviews(profile_url, headers, TEXTS)
+
     run_charts = console.input(TEXTS['run_charts']).strip().lower()
     if run_charts in ["y", "н", "yes", "да", "д"]:
         from visual import visual_data

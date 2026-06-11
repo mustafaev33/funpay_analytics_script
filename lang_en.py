@@ -42,7 +42,13 @@ TEXTS = {
     'sls_week': "\n[bold #21cf44]Sales by day of the week:[bold #21cf44]",
     'prof_error': "[bold red]Error connecting to profile. Error code: {}[bold red]",
     'rev_title': "[bold cyan]Analytical rating and reviews:[bold cyan]",
-    'rating': "[bold bright_green]Rating: {}[bold bright_green]",
+    'green_rating': "[bold green]Rating: {}[bold green]",
+    'yellow_rating': "[bold yellow]Rating: {}[bold yellow]",
+    'red_rating': "[bold red]Rating: {}[bold red]",
     'rev_searched': "[bold yellow]Reviews verified: {}[bold yellow]",
-    'rev_error': "[bold red]Error searching for reviews: {}[bold red]"
+    'top_rev_cnt': "\n[bold cyan]Top keywords in reviews:[/bold cyan]",
+    'rev_results': "[white]The word[bold white] [bold cyan]{}[bold cyan] [bold white]appears[bold white] [bold cyan]{}[bold cyan] [bold white]times[bold white]",
+    'rev_error': "[bold red]Error searching for reviews: {}[bold red]",
+    'run_reviews': "[bold white]Run review analytics? (y/n): [bold white]",
+    'enter_prof_url': "[bold red]ATTENTION! Before launching review analytics, please enter your FunPay profile link: [bold red]"
 }
