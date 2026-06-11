@@ -12,7 +12,7 @@ TEXTS = {
     'success': "[bold #21cf44]Успешное подключение[/bold #21cf44]",
     'found': "[bold yellow]Найдено продаж: {}[/bold yellow]",
     'collected': "[bold cyan]Собранные данные:[/bold cyan]",
-    'save_choice': "[bold #10e8a0]Сохранить данные в csv-файл? Введите y/д - если да, или любой другой символ - если нет: [/bold #10e8a0]",
+    'save_choice': "[bold #10e8a0]Сохранить данные? Введите y/д - если да, или любой другой символ - если нет: [/bold #10e8a0]",
     'found_old_file': "[bold white]Найден старый файл с {} записями. Обновляю, подождите...[/bold white]",
     'success_update': "[bold #21cf44]Успешное обновление! Добавлено {} новых записей[/bold #21cf44]",
     'total_notes': "[bold white]Всего записей в файле: {}[/bold white]",
@@ -20,9 +20,9 @@ TEXTS = {
     'success_no_save': "[bold #21cf44]Успешно[/bold #21cf44]",
     'error_conn': "[bold red]Ошибка подключения. Код статуса: {}[/bold red]",
     'revenue_visual': "Выручка по месяцам {}",
-    'run_analytics': "[bold white]Запустить текстовую аналитику? (y/n): [/bold white]",
+    'run_analytics': "[bold white]Запустить текстовую аналитику (только для csv и xlsx файлов)? (y/n): [/bold white]",
     'run_charts': "[bold white]Построить графики? (y/n): [/bold white]",
-    'load_data': "[bold #21cf44]Загружаем данные из my_sales.csv[/bold #21cf44]",
+    'load_data': "[bold #21cf44]Загружаем данные[/bold #21cf44]",
     'rec_upload': "\n[bold cyan]Загружено записей: {}[bold cyan]",
     'fin_sum': "\n[bold red]ФИНАНСОВАЯ СВОДКА:[bold red]",
     'gen_stat': "\n[bold #21cf44]Общая статистика:[bold #21cf44]",
@@ -52,5 +52,10 @@ TEXTS = {
     'run_reviews': "[bold white]Запустить аналитику отзывов? (y/n): [bold white]",
     'enter_prof_url': "[bold red]ВНИМАНИЕ! Перед запуском аналитики отзывов введите ссылку на Ваш профиль FunPay: [bold red]",
     'good_words': ["быстро", "хорошо", "спасибо", "рекомендую", "отлично", "топ", "качественно", "адекватно", "+rep"],
-    'bad_words': ["обман", "плохо", "долго", "бан", "кидалово", "мошенник", "кинуло", "обманул", "-rep", "откинуло", "забанило", "забанили"]
+    'bad_words': ["обман", "плохо", "долго", "бан", "кидалово", "мошенник", "кинуло", "обманул", "-rep", "откинуло", "забанило", "забанили"],
+    'save_format': "[bold cyan]Выберите формат сохранения:\n  1. CSV (текстовый файл)\n  2. Excel (.xlsx)\n  3. PDF (документ)[bold cyan]",
+    'enter_format': "[bold green]Ваш выбор, введите (1 или csv / 2 или excel или xlsx / 3 или pdf): [bold green]",
+    'saved_excel': "[bold #28381d]Успешно создан xlsx-файл с данными[bold #28381d]",
+    'saved_pdf': "[bold #380402]Успешно создан pdf-файл с данными[bold #380402]",
+    'data_error': "[bold red]Ошибка, файл не найден[bold red]"
 }

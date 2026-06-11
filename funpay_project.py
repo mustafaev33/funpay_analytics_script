@@ -77,6 +77,9 @@ if response.status_code == 200:
 
     save = console.input(TEXTS['save_choice']).strip().lower()
     if save in ["y", "н", "yes", "да", "д"]:
+        console.print(TEXTS['save_format'])
+        format_choice = console.input(TEXTS['enter_format']).strip().lower()
+
         try:
 
             old_df = pd.read_csv("my_sales.csv")
@@ -84,13 +87,24 @@ if response.status_code == 200:
             update_df = pd.concat([old_df, df], ignore_index=True)
             update_df = update_df.drop_duplicates(subset=['Заказ'], keep='first')
             new_notes = len(update_df) - len(old_df)
-            update_df.to_csv("my_sales.csv", index=False, encoding="utf-8-sig")
-            console.print(TEXTS['success_update'].format(new_notes))
-            console.print(TEXTS['total_notes'].format(len(update_df)))
-
         except FileNotFoundError:
-            df.to_csv("my_sales.csv", index=False, encoding="utf-8-sig")
-            console.print(TEXTS['saved'])
+            update_df = df
+            new_notes = len(df)
+
+        if format_choice in ["1", "csv"]:
+            update_df.to_csv("my_sales.csv", index=False, encoding="utf-8-sig")
+            console.print(TEXTS['saved'].format(new_notes, len(update_df)))
+        elif format_choice in ["2", "excel", "xlsx"]:
+            import openpyxl
+            update_df.to_excel("my_sales.xlsx", index=False, engine='openpyxl')
+            console.print(TEXTS['saved_excel'].format(new_notes, len(update_df)))
+        elif format_choice in ["3", "pdf"]:
+            from visual import save_as_pdf
+            save_as_pdf(update_df, "my_sales.pdf")
+            console.print(TEXTS['saved_pdf'].format(new_notes, len(update_df)))
+        else:
+            update_df.to_csv("my_sales.csv", index=False, encoding="utf-8-sig")
+            console.print(TEXTS['saved'].format(new_notes, len(update_df)))
     else:
         console.print(TEXTS['success_no_save'])
 else:
@@ -99,9 +113,9 @@ else:
 if len(df) > 0:
     run_analytics = console.input(TEXTS['run_analytics']).strip().lower()
     if run_analytics in ["y", "н", "yes", "да", "д"]:
-        import data_analyzer
+        from data_analyzer import run_data_analytics
         from datetime_analyzer import analyze_dates 
-        data_analyzer
+        run_data_analytics()
         analyze_dates(df, currency)
 
     run_reviews = console.input(TEXTS['run_reviews']).strip().lower()

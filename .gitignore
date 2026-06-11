@@ -27,4 +27,6 @@ __nuitka_cache/
 *.png
 *.html
 *.csv
+*.xlsx
+*.pdf
 *.ico

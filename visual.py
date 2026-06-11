@@ -42,3 +42,37 @@ def visual_data(df, currency):
     plt.title('Succesful deals percentage', fontsize=14, fontweight='bold')
     plt.tight_layout()
     plt.show()
+
+def save_as_pdf(df, filename):
+    from matplotlib.backends.backend_pdf import PdfPages
+    rows_per_page = 25
+    total_rows = len(df)
+    total_pages = (total_rows // rows_per_page) + 1
+    
+    with PdfPages(filename) as pdf:
+        for page_num in range(total_pages):
+
+            start_idx = page_num * rows_per_page
+            end_idx = start_idx + rows_per_page
+            page_df = df.iloc[start_idx:end_idx]
+            
+            fig, ax = plt.subplots(figsize=(14, 8))
+            ax.axis('tight')
+            ax.axis('off')
+            
+            table = ax.table(
+                cellText=page_df.values, 
+                colLabels=page_df.columns, 
+                cellLoc='center', 
+                loc='center'
+            )
+            
+            table.auto_set_font_size(False)
+            table.set_fontsize(8)
+            table.scale(1.2, 1.5)
+            
+            plt.title(f"FunPay Sales Report (Страница {page_num + 1} из {total_pages})", 
+                     fontsize=14, fontweight='bold', pad=20)
+            
+            pdf.savefig(fig, bbox_inches='tight')
+            plt.close()

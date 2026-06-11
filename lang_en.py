@@ -12,7 +12,7 @@ TEXTS = {
     'success': "[bold #21cf44]Succesful connection[/bold #21cf44]",
     'found': "[bold yellow]Found {} sales[/bold yellow]",
     'collected': "[bold cyan]Collected data: [/bold cyan]",
-    'save_choice': "[bold #10e8a0]Do you want to save data to csv-file? Enter y/н - if yes or other symbol - if no: [/bold #10e8a0]",
+    'save_choice': "[bold #10e8a0]Do you want to save data? Enter y/н - if yes or other symbol - if no: [/bold #10e8a0]",
     'found_old_file': "[bold white]Found data-file with {} data-notes. Updating, please wait[/bold white]",
     'success_update': "[bold #21cf44]Succesful updating! Add {} new notes[/bold #21cf44]",
     'total_notes': "[bold #10e8a0]Notes in new data-file: {}[/bold #10e8a0]",
@@ -20,9 +20,9 @@ TEXTS = {
     'success_no_save': "[bold #21cf44]Succesfully[/bold #21cf44]",
     'error_conn': "[bold red]Connection error. Status code: {}[/bold red]",
     'revenue_visual': "Revenue by month {}",
-    'run_analytics': "[bold white]Run text analytics? (y/n): [/bold white]",
+    'run_analytics': "[bold white]Run text analytics (only for csv and xlsx files)? (y/n): [/bold white]",
     'run_charts': "[bold white]Build charts? (y/n): [/bold white]",
-    'load_data': "[bold #21cf44]Loading data from my_sales.csv[/bold #21cf44]",
+    'load_data': "[bold #21cf44]Loading data[/bold #21cf44]",
     'rec_upload': "\n[bold cyan]Records uploaded: {}[bold cyan]",
     'fin_sum': "\n[bold red]FINANCIAL SUMMARY:[bold red]",
     'gen_stat': "\n[bold #21cf44]General statistics:[bold #21cf44]",
@@ -52,5 +52,10 @@ TEXTS = {
     'run_reviews': "[bold white]Run review analytics? (y/n): [bold white]",
     'enter_prof_url': "[bold red]ATTENTION! Before launching review analytics, please enter your FunPay profile link: [bold red]",
     'good_words': ["fast", "good", "thanks", "recommend", "excellent", "top", "quality", "adequate", "+rep"],
-    'bad_words': ["scam", "bad", "slow", "ban", "fraud", "cheat", "liar", "fake", "-rep"]
+    'bad_words': ["scam", "bad", "slow", "ban", "fraud", "cheat", "liar", "fake", "-rep"],
+    'save_format': "[bold cyan]Select the save format:\n 1. CSV (text file)\n 2. Excel (.xlsx)\n 3. PDF (document)[bold cyan]",
+    'enter_format': "[bold green]Your choice, enter (1 or csv / 2 or excel or xlsx / 3 or pdf): [bold green]",
+    'saved_excel': "[bold #28381d]Succesful create xlsx-data file[bold #28381d]",
+    'saved_pdf': "[bold #380402]Succesful create pdf-data file[bold #380402]",
+    'data_error': "[bold red]Error, file not found[bold red]"
 }
