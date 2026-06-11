@@ -47,8 +47,10 @@ TEXTS = {
     'red_rating': "[bold red]Рейтинг: {}[bold red]",
     'rev_searched': "[bold yellow]Отзывов проверено: {}[bold yellow]",
     'top_rev_cnt': "\n[bold cyan]Топ ключевых слов в отзывах:[/bold cyan]",
-    'rev_results': "[bold white]Слово[bold white] [bold cyan]{}[bold cyan] [bold white]встречается[bold white] [bold cyan]{}[bold cyan] [bold white]раз[bold white]",
+    'rev_results': "[bold white]Слово[bold white] [{}]{}[{}] [bold white]встречается[bold white] [bold cyan]{}[bold cyan] [bold white]раз[bold white]",
     'rev_error': "[bold red]Ошибка поиска отзывов[bold red]",
     'run_reviews': "[bold white]Запустить аналитику отзывов? (y/n): [bold white]",
-    'enter_prof_url': "[bold red]ВНИМАНИЕ! Перед запуском аналитики отзывов введите ссылку на Ваш профиль FunPay: [bold red]"
+    'enter_prof_url': "[bold red]ВНИМАНИЕ! Перед запуском аналитики отзывов введите ссылку на Ваш профиль FunPay: [bold red]",
+    'good_words': ["быстро", "хорошо", "спасибо", "рекомендую", "отлично", "топ", "качественно", "адекватно", "+rep"],
+    'bad_words': ["обман", "плохо", "долго", "бан", "кидалово", "мошенник", "кинуло", "обманул", "-rep", "откинуло", "забанило", "забанили"]
 }

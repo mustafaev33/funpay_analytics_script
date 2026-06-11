@@ -38,7 +38,7 @@ def check_reviews(profile_url, headers, texts):
         console.print(TEXTS['rev_error'])
         return
     
-    keywords = ["быстро", "хорошо", "спасибо", "топ", "отлично", "четко", "+rep", "-rep", "норм", "обман", "плохо", "долго", "бан", "бонус", "возврат","откинуло","забанило"]
+    keywords = TEXTS['good_words'] + TEXTS['bad_words']
 
     results = []
     for word in keywords:
@@ -50,4 +50,14 @@ def check_reviews(profile_url, headers, texts):
 
     console.print(TEXTS['top_rev_cnt'])
     for item in results:
-        console.print(TEXTS['rev_results'].format(item['word'], item['count']))
+        rev_word = item["word"]
+        rev_num = item["count"]
+
+        if rev_word in TEXTS["good_words"]:
+            color = "bold green" 
+        elif rev_word in TEXTS["bad_words"]:
+            color = "bold red"
+        else:
+            color = None
+
+        console.print(TEXTS['rev_results'].format(color , item['word'], color, item['count']))

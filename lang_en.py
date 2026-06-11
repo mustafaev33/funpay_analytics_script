@@ -47,8 +47,10 @@ TEXTS = {
     'red_rating': "[bold red]Rating: {}[bold red]",
     'rev_searched': "[bold yellow]Reviews verified: {}[bold yellow]",
     'top_rev_cnt': "\n[bold cyan]Top keywords in reviews:[/bold cyan]",
-    'rev_results': "[white]The word[bold white] [bold cyan]{}[bold cyan] [bold white]appears[bold white] [bold cyan]{}[bold cyan] [bold white]times[bold white]",
+    'rev_results': "[white]The word[bold white] [{}]{}[{}] [bold white]appears[bold white] [bold cyan]{}[bold cyan] [bold white]times[bold white]",
     'rev_error': "[bold red]Error searching for reviews: {}[bold red]",
     'run_reviews': "[bold white]Run review analytics? (y/n): [bold white]",
-    'enter_prof_url': "[bold red]ATTENTION! Before launching review analytics, please enter your FunPay profile link: [bold red]"
+    'enter_prof_url': "[bold red]ATTENTION! Before launching review analytics, please enter your FunPay profile link: [bold red]",
+    'good_words': ["fast", "good", "thanks", "recommend", "excellent", "top", "quality", "adequate", "+rep"],
+    'bad_words': ["scam", "bad", "slow", "ban", "fraud", "cheat", "liar", "fake", "-rep"]
 }
