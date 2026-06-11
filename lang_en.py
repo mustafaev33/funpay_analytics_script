@@ -57,5 +57,9 @@ TEXTS = {
     'enter_format': "[bold green]Your choice, enter (1 or csv / 2 or excel or xlsx / 3 or pdf): [bold green]",
     'saved_excel': "[bold #28381d]Succesful create xlsx-data file[bold #28381d]",
     'saved_pdf': "[bold #380402]Succesful create pdf-data file[bold #380402]",
-    'data_error': "[bold red]Error, file not found[bold red]"
+    'data_error': "[bold red]Error, file not found[bold red]",
+    'found_f': "[bold yellow]Data file found: [bold green]{}[bold green] [bold yellow]",
+    'f_choice': "[bold cyan]Select:\n 1. Go straight to analytics (use saved data)\n 2. Reload data[bold cyan]",
+    'enter_f_choice': "[bold yellow]Your choice (1/2): [bold yellow]",
+    "loaded_from_file": "[bold green]Loaded {} records from file. Going to analytics[bold green]",
 }

@@ -57,5 +57,9 @@ TEXTS = {
     'enter_format': "[bold green]Ваш выбор, введите (1 или csv / 2 или excel или xlsx / 3 или pdf): [bold green]",
     'saved_excel': "[bold #28381d]Успешно создан xlsx-файл с данными[bold #28381d]",
     'saved_pdf': "[bold #380402]Успешно создан pdf-файл с данными[bold #380402]",
-    'data_error': "[bold red]Ошибка, файл не найден[bold red]"
+    'data_error': "[bold red]Ошибка, файл не найден[bold red]",
+    'found_f': "[bold yellow]Обнаружен файл с данными: [bold green]{}[bold green] [bold yellow]",
+    'f_choice': "[bold cyan]Выберите:\n  1. Сразу перейти к аналитике (использовать сохраненные данные)\n  2. Загрузить данные заново[bold cyan]",
+    'enter_f_choice': "[bold yellow]Ваш выбор (1/2): [bold yellow]",
+    "loaded_from_file": "[bold green]Загружено {} записей из файла. Переходим к аналитике.[bold green]"
 }

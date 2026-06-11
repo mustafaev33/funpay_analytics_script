@@ -29,6 +29,7 @@ Built in **Python** using a mix of procedural and modular approaches (functions,
 - `matplotlib` — chart and diagram rendering.
 - `dateparser` — intelligent Russian-language date parsing.
 - `rich` — beautiful highlighting of the output text.
+- `os` — finding files with ready data.
 
 ## Installation & Usage
 
