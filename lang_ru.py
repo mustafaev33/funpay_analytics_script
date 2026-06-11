@@ -39,5 +39,10 @@ TEXTS = {
     'date_analyzer': "[bold #21cf44]Аналитика по датам:[bold #21cf44]",
     'an_data_notes': "[bold white]Проанализированно {} из {} записей[bold white]",
     'sls_by_month': "\n[bold #21cf44]Продажи по месяцам:[bold #21cf44]",
-    'sls_week': "\n[bold #21cf44]Продажи по дням недели:[bold #21cf44]"
+    'sls_week': "\n[bold #21cf44]Продажи по дням недели:[bold #21cf44]",
+    'prof_error': "[bold red]Ошибка подключения к профилю. Код ошибки: {}[bold red]",
+    'rev_title': "[bold cyan]Аналитика рейтинга и отзывов:[bold cyan]",
+    'rating': "[bold bright_green]Рейтинг: {}[bold bright_green]",
+    'rev_searched': "[bold yellow]Отзывов проверено: {}[bold yellow]",
+    'rev_error': "[bold red]Ошибка поиска отзывов[bold red]"
 }

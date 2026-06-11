@@ -39,5 +39,10 @@ TEXTS = {
     'date_analyzer': "[bold #21cf44]Date analyzer:[bold #21cf44]",
     'an_data_notes': "[bold white]Analyzed {} of {} data-notes[bold white]",
     'sls_by_month': "\n[bold #21cf44]Sales by month:[bold #21cf44]",
-    'sls_week': "\n[bold #21cf44]Sales by day of the week:[bold #21cf44]"
+    'sls_week': "\n[bold #21cf44]Sales by day of the week:[bold #21cf44]",
+    'prof_error': "[bold red]Error connecting to profile. Error code: {}[bold red]",
+    'rev_title': "[bold cyan]Analytical rating and reviews:[bold cyan]",
+    'rating': "[bold bright_green]Rating: {}[bold bright_green]",
+    'rev_searched': "[bold yellow]Reviews verified: {}[bold yellow]",
+    'rev_error': "[bold red]Error searching for reviews: {}[bold red]"
 }
