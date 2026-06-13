@@ -61,5 +61,16 @@ TEXTS = {
     'found_f': "[bold yellow]Data file found: [bold green]{}[bold green] [bold yellow]",
     'f_choice': "[bold cyan]Select:\n 1. Go straight to analytics (use saved data)\n 2. Reload data[bold cyan]",
     'enter_f_choice': "[bold yellow]Your choice (1/2): [bold yellow]",
-    "loaded_from_file": "[bold green]Loaded {} records from file. Going to analytics[bold green]",
+    'loaded_from_file': "[bold green]Loaded {} records from file. Going to analytics[bold green]",
+    'lot_load': "\n[bold green]Loading item information...[bold green]",
+    'not_found': "[bold red]Not found.[bold red]",
+    'no_desc': "[bold red]No description.[bold red]",
+    'lot_title': "[bold cyan]Lot information:[bold cyan]",
+    'lot_name': "[bold green]Lot name:[bold green]",
+    'seller': "[bold green]Seller:[bold green]",
+    'params': "[bold green]Params:[bold green]",
+    'desc': "[bold green]Description:[bold green]",
+    'enter_lot_url': "[bold green]Enter the link to the lot: [bold green]",
+    'lot_choice': "[bold white]Analyze FunPay lot before purchase? (y/n): [bold white]",
+    'url_required': "[bold red]URL is required![bold red]"
 }

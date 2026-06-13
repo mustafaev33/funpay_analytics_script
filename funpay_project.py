@@ -163,6 +163,18 @@ if len(df) > 0:
         else:
             check_reviews(profile_url, headers, TEXTS)
 
+    parse_lot = console.input(TEXTS['lot_choice']).strip().lower()
+    if parse_lot in ["y", "н", "yes", "да", "д"]:
+        from funpay_discrb_searcher import parse_lot_info, display_lot_info
+        
+        lot_url = console.input(TEXTS['enter_lot_url']).strip()
+        
+        if not lot_url:
+            console.print(TEXTS['url_required'])
+        else:
+            lot_data = parse_lot_info(lot_url, headers, TEXTS)
+            display_lot_info(lot_data, TEXTS)
+
     run_charts = console.input(TEXTS['run_charts']).strip().lower()
     if run_charts in ["y", "н", "yes", "да", "д"]:
         from visual import visual_data

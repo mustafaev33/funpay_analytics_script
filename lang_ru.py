@@ -61,5 +61,16 @@ TEXTS = {
     'found_f': "[bold yellow]Обнаружен файл с данными: [bold green]{}[bold green] [bold yellow]",
     'f_choice': "[bold cyan]Выберите:\n  1. Сразу перейти к аналитике (использовать сохраненные данные)\n  2. Загрузить данные заново[bold cyan]",
     'enter_f_choice': "[bold yellow]Ваш выбор (1/2): [bold yellow]",
-    "loaded_from_file": "[bold green]Загружено {} записей из файла. Переходим к аналитике.[bold green]"
+    'loaded_from_file': "[bold green]Загружено {} записей из файла. Переходим к аналитике.[bold green]",
+    'lot_load': "\n[bold green]Загрузка информации о лоте...[bold green]",
+    'not_found': "[bold red]Не найдено.[bold red]",
+    'no_desc': "[bold red]Нет описания.[bold red]",
+    'lot_title': "[bold cyan]Информация о лоте:[bold cyan]",
+    'lot_name': "[bold green]Название лота:[bold green]",
+    'seller': "[bold green]Продавец:[bold green]",
+    'params': "[bold green]Параметры:[bold green]",
+    'desc': "[bold green]Описание:[bold green]",
+    'enter_lot_url': "[bold green]Введите ссылку на лот: [bold green]",
+    'lot_choice': "[bold white]Проанализировать лот товара на FunPay? (y/n): [bold white]",
+    'url_required': "[bold red]Ссылка обязательна для ввода![/]"
 }
