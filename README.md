@@ -4,7 +4,7 @@
   <img src="screenshots/logo.png" alt="FunPay Analytics Logo" width="250"/>
 </p>
 
-# FunPay Analytics Script by mustafaev33
+# FunPay Analytics MultiTool by mustafaev33
 
 A Python script for automatic collection, structuring, and analysis of sales data from the FunPay marketplace.
 
@@ -14,8 +14,10 @@ Solves the problem of lacking built-in analytics on the platform, helping seller
 
 - **Auto Cookie Collection**: automatically extracts session cookies from the browser — no manual copying required.
 - **Smart CSV Updating**: appends only new sales, ignoring duplicates by order ID.
+- **Conversion to xlsx and pdf**: has the ability to convert received data into xlsx (excel) and pdf format
 - **Localization**: supports both Russian and English interfaces.
 - **Text Analytics**: automatic calculation of revenue, average order value, refund rate, and sales by period.
+- **Analysis of reviews and lots**: has the ability to conduct a full analysis of the store profile based on reviews and average rating, and also has the ability to conduct a full analysis of the lot (product card) using links
 - **Visualization**: generates clean charts (revenue trends, deal status distribution).
 
 ## Tech Stack
@@ -36,7 +38,7 @@ Built in **Python** using a mix of procedural and modular approaches (functions,
 You don't need to install Python or any libraries. The tool is packaged in a ZIP archive with all dependencies.
 
 ### 1. Download
-Go to the [Releases](https://github.com/mustafaev33/funpay_analytics_script/releases) page and download the latest archive `FunPayAnalytics_v1.1.0.zip`.
+Go to the [Releases](https://github.com/mustafaev33/funpay_analytics_script/releases) page and download the latest archive `FunPayAnalytics_v1.2.0.zip`.
 
 ### 2. Unpacking
 Unzip the archive to any convenient folder (for example, `C:\Programs\FunPayAnalytics`).
@@ -75,9 +77,15 @@ Since the `.exe` is not digitally signed, Windows SmartScreen or your antivirus 
 ![Date/Time Analytics](screenshots/datetime_stats.png)
 *Figure 6: Monthly and weekly sales analytics from collected data*
 
+![Review analytics](screenshots/rev_analytics.png)
+*Figure 7: Store review analytics with average rating and keywords*
+
+![Lot analytics](screenshots/lot_analytics.png)
+*Figure 8: Lot analytics via the link with full available information and descriptions*
+
 ### Charts & Visualizations
 ![Charts and Diagrams](screenshots/visual.png)
-*Figure 7: Generated charts and pie diagrams showing key metrics*
+*Figure 9: Generated charts and pie diagrams showing key metrics*
 
 ## Contact & Feedback
 
